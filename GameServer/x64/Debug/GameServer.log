@@ -1,6 +1,4 @@
-﻿  GameServer.cpp
-C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\GameServer\GameServer.cpp(24,16): error C2065: 'OUT': 선언되지 않은 식별자입니다.
-C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\GameServer\GameServer.cpp(24,20): error C2146: 구문 오류: ')'이(가) 'data' 식별자 앞에 없습니다.
-C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\GameServer\GameServer.cpp(24,24): error C2059: 구문 오류: ')'
-C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\GameServer\GameServer.cpp(24,25): error C2059: 구문 오류: ')'
-C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\GameServer\GameServer.cpp(25,4): error C2146: 구문 오류: ';'이(가) 'cout' 식별자 앞에 없습니다.
+﻿  ConcurrentStack.cpp
+  GameServer.cpp
+  코드를 생성하고 있습니다...
+  GameServer.vcxproj -> C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\Binary\Debug\GameServer.exe
