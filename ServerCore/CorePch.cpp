@@ -2,6 +2,3 @@
 #include "CorePch.h"
 
 
-void HelloWorld() {
-	cout << "¤Ð" << endl;
-}
