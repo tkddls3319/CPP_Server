@@ -3,13 +3,14 @@
 #include "ThreadManager.h"
 
 ThreadManager* GThreadManager = nullptr;
-
-CoreGlobal::CoreGlobal()
+class CoreGlobal
 {
-	GThreadManager = new ThreadManager();
-}
+public:
+	CoreGlobal() {
+		GThreadManager = new ThreadManager();
+	}
+	~CoreGlobal() {
+		delete GThreadManager;
+	}
+}GCoreGlobal;
 
-CoreGlobal::~CoreGlobal()
-{
-	delete GThreadManager;
-}
