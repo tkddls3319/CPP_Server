@@ -1,0 +1,5 @@
+﻿  pch.cpp
+  AccountManager.cpp
+  GameServer.cpp
+  PlayerManager.cpp
+LINK : fatal error LNK1104: 'Release\ServerCore.lib' 파일을 열 수 없습니다.
