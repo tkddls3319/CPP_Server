@@ -1,2 +1,6 @@
-﻿  GameServer.cpp
-  GameServer.vcxproj -> C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\Binary\Debug\GameServer.exe
+﻿  pch.cpp
+  AccountManager.cpp
+  GameServer.cpp
+  PlayerManager.cpp
+  코드를 생성하고 있습니다...
+  GameServer.vcxproj -> D:\2.Project\9999.My\CPP_Server\Server\Binary\Debug\GameServer.exe

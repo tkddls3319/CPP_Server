@@ -4,6 +4,7 @@
   CoreTLS.cpp
   DeadLockProfiler.cpp
   Lock.cpp
+  RefCounting.cpp
   ThreadManager.cpp
   코드를 생성하고 있습니다...
-  ServerCore.vcxproj -> C:\Users\tkddl\PsiDdrive\1.Project\CPP_Server\CPP_Server\Libraries\Debug\ServerCore.lib
+  ServerCore.vcxproj -> D:\2.Project\9999.My\CPP_Server\Server\Libraries\Debug\ServerCore.lib
