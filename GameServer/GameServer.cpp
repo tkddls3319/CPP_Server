@@ -7,26 +7,72 @@
 #define OUT
 #include "PlayerManager.h"
 #include "AccountManager.h"
-
 #include "RefCounting.h"
-#include "Memory.h"
 
-using KnightRef = TSharedPtr<class Knight>;
-class Knight : public RefCountable
+
+class Wraight : public RefCountable
 {
 public:
-	void SetTarget(KnightRef target)
+	int _hp = 150;
+	int _posX = 0;
+	int _posY = 0;
+};
+using WraightRef = TSharedPtr<Wraight>;
+class Missile : public RefCountable
+{
+public:
+	void SetTarget(WraightRef target)
 	{
 		_target = target;
 	}
-	KnightRef _target = nullptr;
+	bool Update()
+	{
+		if (_target == nullptr)
+			return true;
+
+		int posX = _target->_posX;
+		int posY = _target->_posY;
+
+		//TODO : 쫓아가기
+
+		if (_target->_hp == 0)
+		{
+			_target = nullptr;
+			return true;
+		}
+
+		return false;
+	}
+
+	WraightRef _target = nullptr;
 };
 
 
+using MissileRef = TSharedPtr<Missile>;
+
 int main()
 {
-	Knight* knight = xnew<Knight>();
+	WraightRef wraight(new Wraight());
+	wraight->ReleaseRef();
+	MissileRef missile(new Missile());
+	missile->ReleaseRef();
 
-	xdelete(knight);
+	missile->SetTarget(wraight);
+
+	//레이스 피격 당함
+	wraight->_hp = 0;
+	wraight = nullptr;
+
+	while (true)
+	{
+		if (missile) 
+		{
+			if (missile->Update())
+			{
+				missile = nullptr;
+			}
+		}
+	}
+	wraight = nullptr;
 }
 

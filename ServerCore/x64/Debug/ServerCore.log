@@ -1,5 +1,10 @@
 ﻿  pch.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xiosbase(311,46): warning C4003: 함수 같은 매크로 호출 'xalloc'에 대해 인수가 부족합니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xiosbase(311,46): error C2653: 'BaseAllocator': 클래스 또는 네임스페이스 이름이 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xiosbase(311,55): error C2059: 구문 오류: '{'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xiosbase(311,55): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  CoreGlobal.cpp
+  CorePch.cpp
+  CoreTLS.cpp
+  DeadLockProfiler.cpp
+  Lock.cpp
+  RefCounting.cpp
+  ThreadManager.cpp
+  코드를 생성하고 있습니다...
+  ServerCore.vcxproj -> D:\2.Project\9999.My\CPP_Server\Server\Libraries\Debug\ServerCore.lib
