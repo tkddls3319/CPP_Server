@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Allocator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Allocator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreMacro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CoreMacro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Memory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Memory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Memory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Memory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Allocator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Allocator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreGlobal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CoreGlobal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\include\\xlocnum||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreGlobal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CoreGlobal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CorePch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA355BA8-5123-4F77-857D-B2B11F450974}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CorePch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\include\\ios||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 340,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Allocator.h",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Allocator.h",
+              "RelativeDocumentMoniker": "ServerCore\\Allocator.h",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Allocator.h",
+              "RelativeToolTip": "ServerCore\\Allocator.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2023-12-18T08:48:01.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Allocator.cpp",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Allocator.cpp",
+              "RelativeDocumentMoniker": "ServerCore\\Allocator.cpp",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Allocator.cpp",
+              "RelativeToolTip": "ServerCore\\Allocator.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2023-12-18T08:47:59.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Memory.h",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Memory.h",
+              "RelativeDocumentMoniker": "ServerCore\\Memory.h",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Memory.h",
+              "RelativeToolTip": "ServerCore\\Memory.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2023-12-18T08:47:55.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Memory.cpp",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Memory.cpp",
+              "RelativeDocumentMoniker": "ServerCore\\Memory.cpp",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\Memory.cpp",
+              "RelativeToolTip": "ServerCore\\Memory.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2023-12-18T08:47:54.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CorePch.cpp",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CorePch.cpp",
+              "RelativeDocumentMoniker": "ServerCore\\CorePch.cpp",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CorePch.cpp",
+              "RelativeToolTip": "ServerCore\\CorePch.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2023-12-18T08:47:31.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CoreMacro.h",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreMacro.h",
+              "RelativeDocumentMoniker": "ServerCore\\CoreMacro.h",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreMacro.h",
+              "RelativeToolTip": "ServerCore\\CoreMacro.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2023-12-18T08:47:30.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CoreGlobal.cpp",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreGlobal.cpp",
+              "RelativeDocumentMoniker": "ServerCore\\CoreGlobal.cpp",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreGlobal.cpp",
+              "RelativeToolTip": "ServerCore\\CoreGlobal.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2023-12-18T08:47:28.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoreGlobal.h",
+              "DocumentMoniker": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreGlobal.h",
+              "RelativeDocumentMoniker": "ServerCore\\CoreGlobal.h",
+              "ToolTip": "D:\\2.Project\\9999.My\\CPP_Server\\Server\\ServerCore\\CoreGlobal.h",
+              "RelativeToolTip": "ServerCore\\CoreGlobal.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2023-12-18T08:47:27.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ios",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\include\\ios",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\include\\ios",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAMwK8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-27T08:41:48.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "xlocnum",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\include\\xlocnum",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\include\\xlocnum",
+              "ViewState": "AQIAAFgGAAAAAAAAAAAMwGkGAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2023-12-18T08:47:06.68Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 260,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
