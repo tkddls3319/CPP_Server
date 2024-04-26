@@ -1,6 +1,7 @@
 #pragma once
-#include<mutex>
-#include<atomic>
+#include <mutex>
+#include <atomic>
+
 using BYTE = unsigned char;
 using int8 = __int8;
 using int16 = __int16;

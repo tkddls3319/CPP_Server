@@ -3,6 +3,5 @@
 #include "CorePch.h"
 int main()
 {
-	HellowWorld();
 
 }
