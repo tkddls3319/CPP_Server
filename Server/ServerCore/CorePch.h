@@ -18,5 +18,5 @@
 #include<iostream>
 using namespace std;
 
-//#include "Lock.h"
+#include "Lock.h"
 

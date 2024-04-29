@@ -1,24 +1,34 @@
 ﻿#include "pch.h"
 #include <iostream>
-#include "CorePch.h"
 #include <thread>
 #include <future>
-#include "CoreMacro.h"
 #include "ThreadManager.h"
 
-CoreGlobal Core;
+#include "PlayerManager.h"
+#include "AccountManager.h"
 
-void ThreadMain() {
-	while (true)
-	{
-		cout << "번스레드" << LThreadId << endl;
-
-		this_thread::sleep_for(1s);
-	}
-}
 
 int main()
 {
-	GthreadManager->Launch(ThreadMain);
+	GthreadManager->Launch([=]
+		{
+			while (true)
+			{
+				cout << "PlayerThenAccount" << endl;
+				GPlayerManager.PlayerThenAccount();
+				this_thread::sleep_for(1ms);
+			}
+		});
+
+
+	GthreadManager->Launch([=]
+		{
+			while (true)
+			{
+				cout << "AccountThenPlayer" << endl;
+				GAccountManager.AccountThenPlayer();
+				this_thread::sleep_for(1ms);
+			}
+		});
 	GthreadManager->Join();
 }

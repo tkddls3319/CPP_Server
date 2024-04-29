@@ -1,3 +1,11 @@
 ﻿  pch.cpp
+  Allocator.cpp
+  CoreGlobal.cpp
   CorePch.cpp
+  CoreTLS.cpp
+  DeadLockProfiler.cpp
+  Lock.cpp
+  Memory.cpp
+  RefCounting.cpp
+  ThreadManager.cpp
   ServerCore.vcxproj -> D:\2.Project\9999.My\CPP\CPP_Server\Server\Libraries\Release\ServerCore.lib

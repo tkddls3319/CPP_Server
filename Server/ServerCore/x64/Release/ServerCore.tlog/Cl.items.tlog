@@ -1,2 +1,10 @@
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Allocator.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\Allocator.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreGlobal.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\CoreGlobal.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CorePch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\CorePch.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreTLS.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\CoreTLS.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\DeadLockProfiler.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\DeadLockProfiler.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Lock.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\Lock.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\Memory.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\pch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\pch.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RefCounting.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\RefCounting.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\ThreadManager.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Release\ThreadManager.obj
