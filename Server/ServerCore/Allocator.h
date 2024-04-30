@@ -5,8 +5,20 @@ BaseAllocator
 class BaseAllocator
 {
 public:
-	static void* Alloc(int32 size);
-	static void Release(void* ptr);
-	//asdfasdfaasdasdf
+	static void*	Alloc(int32 size);
+	static void		Release(void* ptr);
 };
 
+
+/*-------------------
+	StompAllocator
+-------------------*/
+
+class StompAllocator
+{
+	enum { PAGE_SIZE = 0x1000 };//4096byte
+
+public:
+	static void*	Alloc(int32 size);
+	static void		Release(void* ptr);
+};

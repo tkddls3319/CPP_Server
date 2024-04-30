@@ -20,23 +20,14 @@ public:
 
 		cout << "~k" << endl;
 	}
-	//static void* operator new (size_t size)
-	//{
-	//	cout << "new" << endl;
-	//	void* ptr = ::malloc(size);
 
-	//	return ptr;
-	//}
-	//static void operator delete(void* ptr)
-	//{
-	//	cout << "delete" << endl;
-
-	//	::free(ptr);
-	//}
+	int32 _hp = 100;
 };
 
 int main()
 {
 	Knight* knight = xnew<Knight>();
 	xdelete(knight);
+
+	knight->_hp = 1000;
 }
