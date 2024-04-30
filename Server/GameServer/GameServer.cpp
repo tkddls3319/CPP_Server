@@ -9,6 +9,7 @@
 
 #include "RefCounting.h"
 #include "Memory.h"
+#include "Allocator.h"
 
 class Knight {
 public:
@@ -26,8 +27,6 @@ public:
 
 int main()
 {
-	Knight* knight = xnew<Knight>();
-	xdelete(knight);
+	Vector<Knight> v(100);
 
-	knight->_hp = 1000;
 }
