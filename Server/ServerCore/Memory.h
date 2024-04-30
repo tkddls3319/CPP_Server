@@ -1,12 +1,41 @@
-
 #pragma once
 #include "Allocator.h"
 
-template<typename Type, typename... Args>
-Type* xnew(Args&&... args)//보편참조
+class MemoryPool;
+
+/*-------------
+	Memory
+---------------*/
+
+class Memory
 {
-	//palacement new - 인자가 몇개든 상관없이 받을 수 있음.
-	Type* memory = static_cast<Type*>(xxalloc(sizeof(Type)));
+	enum
+	{
+		// ~1024까지 32단위, ~2048까지 128단위, ~4096까지 256단위
+		POOL_COUNT = (1024 / 32) + (1024 / 128) + (2048 / 256),
+		MAX_ALLOC_SIZE = 4096
+	};
+
+public:
+	Memory();
+	~Memory();
+
+	void* Allocate(int32 size);
+	void	Release(void* ptr);
+
+private:
+	vector<MemoryPool*> _pools;
+
+	// 메모리 크기 <-> 메모리 풀
+	// O(1) 빠르게 찾기 위한 테이블
+	MemoryPool* _poolTable[MAX_ALLOC_SIZE + 1];
+};
+
+
+template<typename Type, typename... Args>
+Type* xnew(Args&&... args)
+{
+	Type* memory = static_cast<Type*>(xalloc(sizeof(Type)));
 	new(memory)Type(forward<Args>(args)...); // placement new
 	return memory;
 }
@@ -14,6 +43,6 @@ Type* xnew(Args&&... args)//보편참조
 template<typename Type>
 void xdelete(Type* obj)
 {
-	obj->~Type();//소멸자 호출
-	xxrelease(obj);//메모리 해제
+	obj->~Type();
+	xrelease(obj);
 }

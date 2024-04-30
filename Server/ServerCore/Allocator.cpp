@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Allocator.h"
-
+#include "Memory.h"
 /*---------------
 BaseAllocator
 ---------------*/
@@ -32,4 +32,17 @@ void StompAllocator::Release(void* ptr)
 	const int64 address = reinterpret_cast<int64>(ptr);
 	const int64 baseAddress = address - (address % PAGE_SIZE);
 	::VirtualFree(reinterpret_cast<void*>(baseAddress), 0, MEM_RELEASE);//운영체제에 실제로 메모리를 삭제시켜줘.
+}
+
+/*-------------------
+	PoolAllocator
+-------------------*/
+void* PoolAllocator::Alloc(int32 size)
+{
+	return GMemory->Allocate(size);
+}
+
+void PoolAllocator::Release(void* ptr)
+{
+	GMemory->Release(ptr);
 }

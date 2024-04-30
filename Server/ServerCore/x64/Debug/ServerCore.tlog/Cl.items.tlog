@@ -5,6 +5,7 @@ D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreTLS.cpp;D:\2.Project\9
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\DeadLockProfiler.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\DeadLockProfiler.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Lock.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Lock.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Memory.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\MemoryPool.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\MemoryPool.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\pch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\pch.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RefCounting.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\RefCounting.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\ThreadManager.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\ThreadManager.obj
