@@ -1,5 +1,2 @@
 ﻿  GameServer.cpp
-D:\2.Project\9999.My\CPP\CPP_Server\Server\GameServer\GameServer.cpp(83,9): warning C4101: 'recvBuffer' :참조되지 않은 지역 변수입니다.
-  (소스 파일 '/GameServer.cpp'을(를) 컴파일하는 중)
-  
   GameServer.vcxproj -> D:\2.Project\9999.My\CPP\CPP_Server\Server\Binary\Debug\GameServer.exe

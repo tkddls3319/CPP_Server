@@ -7,6 +7,11 @@
 #include <ws2tcpip.h>
 #pragma comment(lib, "ws2_32.lib")
 
+void HandleError(const char* cause)
+{
+	int32 errCode = ::WSAGetLastError();
+	cout << cause << " ErrorCode" << errCode << endl;
+}
 int main()
 {
 	//윈소켓 초기화(w2_32 라이브러리 초기화)
@@ -19,11 +24,10 @@ int main()
 	//type : TCP(SOCK_STREAM), UDP(SOCK_DGRAM)
 	//protocol : 0
 	//return : 성공여부
-	SOCKET clientSocket = ::socket(AF_INET, SOCK_STREAM, 0);
+	SOCKET clientSocket = ::socket(AF_INET, SOCK_DGRAM, 0);
 	if (clientSocket == INVALID_SOCKET)
 	{
-		int32 errCode = ::WSAGetLastError();
-		cout << "socket error code" << errCode << endl;
+		HandleError("Socket");
 		return 0;
 	}
 
@@ -36,39 +40,43 @@ int main()
 	serverAddr.sin_port = ::htons(7777);//PORT
 	//htons(host to network short) Little-Endian, Big-Endian
 
-	//서버에 연결
-	if (::connect(clientSocket, (SOCKADDR*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR)
-	{
-		int32 errCode = ::WSAGetLastError();
-		cout << "Connect error code" << errCode << endl;
-		return 0;
-	}
+	//Connected UDP tcp처럼 사용(실제로연결된건아님)
+	//::connect(clientSocket, (SOCKADDR*)&serverAddr, sizeof(serverAddr));
 
 	//--------------------------
-	///연결성공
-
-	cout << "Connected To Server!" << endl;
-
 	while (true)
 	{
 		char sendBuffer[100] = "Hellow World!";
-		int32 resultCode = ::send(clientSocket, sendBuffer, sizeof(sendBuffer), 0);
+
+		//나의 ip주소 + 포트 번호 설정(아무포트 자동으로설정)
+
+		//UnconnectedUDP 기본적인방식
+		int32 resultCode = ::sendto(clientSocket, sendBuffer, sizeof(sendBuffer), 0, (SOCKADDR*)&serverAddr, sizeof(serverAddr));
+		//Connected UDP tcp처럼 사용(실제로연결된건아님)
+		//int32 resultCode = ::send(clientSocket, sendBuffer, sizeof(sendBuffer), 0);
+
 		if (resultCode == SOCKET_ERROR)
 		{
-			int32 errCode = ::WSAGetLastError();
-			cout << "Send error code" << errCode << endl;
+			HandleError("SendTo");
 			return 0;
 		}
 
 		cout << "Send Data Len = " << sizeof(sendBuffer) << endl;
 
+		SOCKADDR_IN recvAddr;
+		::memset(&recvAddr, 0, sizeof(recvAddr));
+		int32 addrLen = sizeof(recvAddr);
+
 		char recvBuffer[1000];
-		int32 recvLen = ::recv(clientSocket, recvBuffer, sizeof(recvBuffer), 0);
+		//UnconnectedUDP 기본적인방식
+		int32 recvLen = ::recvfrom(clientSocket, recvBuffer, sizeof(recvBuffer), 0, (SOCKADDR*)&recvAddr, &addrLen);
+		//Connected UDP tcp처럼 사용(실제로연결된건아님)
+		//int32 recvLen = ::recv(clientSocket, recvBuffer, sizeof(recvBuffer), 0);
+
 
 		if (recvLen <= 0)
 		{
-			int32 errCode = ::WSAGetLastError();
-			cout << "Recv error code" << errCode << endl;
+			HandleError("Recvfrom");
 			return 0;
 		}
 		cout << "Recv Data = " << recvBuffer << endl;
