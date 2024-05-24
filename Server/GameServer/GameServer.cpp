@@ -21,11 +21,19 @@ void HandleError(const char* cause)
 const int32 BUFSIZE = 1000;
 struct Session
 {
+	WSAOVERLAPPED overlapped = {};
 	SOCKET socket;
 	char recvBuffer[BUFSIZE] = {};
 	int32 recvBytes = 0;
-	int32 sendBytes = 0;
 };
+
+void CALLBACK RecvCallBack(DWORD error, DWORD recvLen, LPWSAOVERLAPPED overlapped, DWORD flags)
+{
+	cout << "Data recv Len" << recvLen << endl;
+	//TODO : 에코 서버를 만든다 WSASend();
+
+	Session* session = (Session*)overlapped;
+}
 
 int main()
 {
@@ -61,96 +69,81 @@ int main()
 
 	cout << "Accept" << endl;
 
-	//fd_set set;
-	//FD_ZERO(set) : 초기화(비운다)
-	//FD_SET(s, &set) : 소켓 s를 넣는다
-	//FD_CLR(s, &set) : 소켓 s를 제거
-	//FD_ISSET : 소켓 s가 set에 들어있으면 0이 아닌 값을 리턴한다. 
+	//Overlapped (콜백기반)
+	//비동기 입출력 지원하는 소켓 생성
+	//비동기 입출력 함수 호출한다다(완료 루틴의 시작 주소를 넘겨준다.)
+	//비동기 방식이기 때문에 바로 실행되지 않을 수 있다. 바로 완료되지 않으면 WSA_IO_PENDING오류가 뜬다.
+	// 비동기 입출력 함수 호출한 쓰레드를 Alertable Wait 상태로 만든다.
+	// ex) WaitForSingleObjectEx, WaitForMultipleObjectsEx, SleepEx, WSAWAitForMultipleEvents
+	//비동기 io완료되면 운영체제는 완료 루틴 호출
+	//완료 루틴 호출이 모두 끝나면 쓰레드는 Alertable Wait 상태에서 빠져나온다.
 
-	vector<Session> sessions;
-	sessions.reserve(100);
+	//void CompletionRoutine()
+	//1) 오류 발생시 0 아닌 값
+	//2) 전송 바이트수
+	//3) 비도익 입출력 함수 호출 시 넘겨준 WSAOVERLAPPED 구조체의 주소값
+	//4) 0
 
-	fd_set reads;
-	fd_set writes;
+	//select 모델
+	//장점) 윈도우/리눅스 공통
+	//단점) 서능 최하 매번등록해야하는 비용, 64개로 제한
+	//WSAEventSelect 모델
+	//장점) 비교적 뛰어난 성능(클라이언트에 적합)
+	//단점) 64개로 제한
+	//Overlapped (이벤트 기반)
+	//장점) 성능이 좋다
+	//단점) 64개 제한
+	//Overlapped (콜백 기반)
+	//장점) 성능이 좋다
+	//단점) 모든 비동기 소켓 함수에서 사용 가능하진 않다(accept)
 
 	while (true)
 	{
-		//소켓 셋 초기화
-		FD_ZERO(&reads);
-		FD_ZERO(&writes);
+		SOCKADDR_IN clientAddr;
+		int32 addrLen = sizeof(clientAddr);
 
-		//ListenSocket 등록
-		FD_SET(listenSocket, &reads);
-
-		//소켓 등록
-		for (Session& s : sessions)
+		SOCKET clientSocket;
+		while (true)
 		{
-			if (s.recvBytes <= s.sendBytes) 
-				FD_SET(s.socket, &reads);
-			else
-				FD_SET(s.socket, &writes);
-		}
-
-		//옵션 마지막 timeout 인자 설정 가능
-	/*	timeval timeout;
-		timeout.tv_sec;
-		timeout.tv_usec;*/
-		int32 retVal = ::select(0, &reads, &writes, nullptr, nullptr);//관찰시작 낙오자 제거
-		if (retVal == SOCKET_ERROR)
-			break;
-
-		//Listener 소켓 체크
-		if (FD_ISSET(listenSocket, &reads))
-		{
-			SOCKADDR_IN clientAddr;//IPv4
-			::memset(&clientAddr, 0, sizeof(clientAddr));
-			int32 addrLen = sizeof(clientAddr);
-			SOCKET clientSocket = ::accept(listenSocket, (SOCKADDR*)&clientAddr, &addrLen);
-
+			clientSocket = ::accept(listenSocket, (SOCKADDR*)&clientAddr, &addrLen);
 			if (clientSocket != INVALID_SOCKET)
-			{
-				cout << "client connected" << endl;
-				sessions.push_back(Session{ clientSocket });
-			}
+				break;
+
+			if (::WSAGetLastError() == WSAEWOULDBLOCK)
+				continue;
+
+			return 0;
 		}
 
-		//나머지 소켓 체크 read나 write
-		for (Session& s : sessions )
+		Session session = Session{ clientSocket };
+		cout << "client connected" << endl;
+
+		while (true)
 		{
-			//read 체크
-			if (FD_ISSET(s.socket, &reads)) 
-			{
-				int32 recvLen = ::recv(s.socket, s.recvBuffer, BUFSIZE, 0);
-				if (recvLen <= 0)
-				{
-					//TODO : SESSIONS 제거 
-					continue;
-				}
+			WSABUF wsaBuf;
+			wsaBuf.buf = session.recvBuffer;
+			wsaBuf.len = BUFSIZE;
 
-				s.recvBytes = recvLen;
+			DWORD recvLen = 0;
+			DWORD flags = 0;
+			if (::WSARecv(clientSocket, &wsaBuf, 1, &recvLen, &flags, &session.overlapped, RecvCallBack) == SOCKET_ERROR)
+			{
+				if (::WSAGetLastError() == WSA_IO_PENDING)
+				{
+					//pending  지연
+					::SleepEx(INFINITE, TRUE);//Alertable Wait apc 상태
+				}
+				else
+				{
+					//TODO : 문제 상황
+				}
 			}
-
-			//read 체크
-			if (FD_ISSET(s.socket, &writes))
+			else
 			{
-				int32 sendLen = ::send(s.socket, &s.recvBuffer[s.sendBytes],s.recvBytes - s.sendBytes, 0);
-				if (sendLen == SOCKET_ERROR)
-				{
-					//TODO : SESSIONS 제거 
-					continue;
-				}
-
-				s.sendBytes += sendLen;
-				if (s.recvBytes == s.sendBytes)
-				{
-					s.recvBytes = 0;
-					s.sendBytes = 0;
-				}
+				cout << "Data Recv Len = " << recvLen << endl;
 			}
 		}
-
+		::closesocket(session.socket);
 	}
-
-
 	::WSACleanup();
 }
