@@ -40,7 +40,7 @@ SOCKET SocketUtils::CreateSocket()
 	return	::WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, NULL, 0, WSA_FLAG_OVERLAPPED);
 }
 
-bool SocketUtils::SetLinger(SOCKET socket, uint16 port, uint16 onoff, uint16 linger)
+bool SocketUtils::SetLinger(SOCKET socket, uint16 onoff, uint16 linger)
 {
 	LINGER option;
 	option.l_onoff = onoff;
@@ -92,7 +92,7 @@ bool SocketUtils::BindAnyAddress(SOCKET socket, uint16 port)
 	return SOCKET_ERROR != ::bind(socket, reinterpret_cast<const SOCKADDR*> (&myAddress), sizeof(myAddress));
 }
 
-bool SocketUtils::Listen(SOCKET socket, int32 backlog = SOMAXCONN)
+bool SocketUtils::Listen(SOCKET socket, int32 backlog)
 {
 	return SOCKET_ERROR != listen(socket, backlog);
 }

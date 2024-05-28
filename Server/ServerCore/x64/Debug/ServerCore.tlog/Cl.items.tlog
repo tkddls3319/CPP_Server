@@ -3,11 +3,15 @@ D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreGlobal.cpp;D:\2.Projec
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CorePch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\CorePch.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreTLS.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\CoreTLS.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\DeadLockProfiler.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\DeadLockProfiler.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\IocpCore.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\IocpCore.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\IocpEvent.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\IocpEvent.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Listener.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Listener.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Lock.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Lock.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Memory.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\MemoryPool.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\MemoryPool.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\NetAddress.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\NetAddress.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\pch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\pch.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RefCounting.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\RefCounting.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Session.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Session.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\SocketUtils.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\SocketUtils.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\ThreadManager.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\ThreadManager.obj
