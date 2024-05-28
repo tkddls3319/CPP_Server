@@ -1,4 +1,1 @@
-﻿  DummyClient.cpp
-  pch.cpp
-  코드를 생성하고 있습니다...
-  DummyClient.vcxproj -> D:\2.Project\9999.My\CPP\CPP_Server\Server\Binary\Debug\DummyClient.exe
+﻿LINK : fatal error LNK1104: 'Debug\ServerCore.lib' 파일을 열 수 없습니다.

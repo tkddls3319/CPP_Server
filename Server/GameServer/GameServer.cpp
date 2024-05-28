@@ -7,18 +7,24 @@
 #include <future>
 #include "ThreadManager.h"
 
-#include "SocketUtils.h"
-#include "Listener.h"
+#include "Service.h"
+#include "Session.h"
+
+class GameSession : public Session
+{
+
+};
 
 int main()
 {
-	//SOCKET socket = SocketUtils::CreateSocket();
-	//SocketUtils::BindAnyAddress(socket, 7777);
-	//SocketUtils::Listen(socket);
-	//::accept(socket, nullptr, nullptr);
+	ServerServiceRef service = MakeShared<ServerService>(
+		NetAddress(L"127.0.0.1", 7777),
+		MakeShared<IocpCore>(),
+		MakeShared<GameSession>(),
+		100);
 
-	Listener listener;
-	listener.StartAccept(NetAddress(L"127.0.0.1", 7777));
+	ASSERT_CRASH(service->Start());
+
 
 	for (int32 i = 0; i < 5; i++)
 	{
@@ -26,7 +32,7 @@ int main()
 			{
 				while (true)
 				{
-					GlocpCore.Dispatch();
+					service->GetIocpCore()->Dispatch();
 				}
 			});
 	}

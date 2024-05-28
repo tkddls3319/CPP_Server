@@ -1,3 +1,43 @@
-﻿  pch.cpp
-  GameServer.cpp
-  GameServer.vcxproj -> D:\2.Project\9999.My\CPP\CPP_Server\Server\Binary\Debug\GameServer.exe
+﻿  GameServer.cpp
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.h(39,17): error C2665: 'ServerService::ServerService': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 '/GameServer.cpp'을(를) 컴파일하는 중)
+  D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Service.h(75,2):
+  'ServerService::ServerService(NetAddress,IocpCoreRef,SessionFactory,int32)'일 수 있습니다.
+  	D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.h(39,17):
+  	'ServerService::ServerService(NetAddress,IocpCoreRef,SessionFactory,int32)': 인수 3을(를) '_Ty'에서 'SessionFactory'(으)로 변환할 수 없습니다.
+          with
+          [
+              _Ty=std::shared_ptr<GameSession>
+          ]
+  		D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.h(39,31):
+  		이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
+  D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.h(39,17):
+  인수 목록 '(_Ty, _Ty, _Ty, _Ty)'을(를) 일치시키는 동안
+          with
+          [
+              _Ty=NetAddress
+          ]
+          and
+          [
+              _Ty=std::shared_ptr<IocpCore>
+          ]
+          and
+          [
+              _Ty=std::shared_ptr<GameSession>
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.h(39,17):
+  템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+  	D:\2.Project\9999.My\CPP\CPP_Server\Server\GameServer\GameServer.cpp(21,29):
+  	컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<ServerService> MakeShared<ServerService,NetAddress,std::shared_ptr<IocpCore>,std::shared_ptr<GameSession>,int>(NetAddress &&,std::shared_ptr<IocpCore> &&,std::shared_ptr<GameSession> &&,int &&)'에 대한 참조를 확인하세요.
+  	D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.h(53,27):
+  	컴파일되는 함수 템플릿 인스턴스화 'Type *xnew<ServerService,_Ty,std::shared_ptr<IocpCore>,std::shared_ptr<GameSession>,int>(_Ty &&,std::shared_ptr<IocpCore> &&,std::shared_ptr<GameSession> &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              Type=ServerService,
+              _Ty=NetAddress
+          ]
+  
