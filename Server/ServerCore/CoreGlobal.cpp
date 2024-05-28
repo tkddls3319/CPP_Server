@@ -4,7 +4,7 @@
 #include "DeadLockProfiler.h"
 #include "SocketUtils.h"
 
-ThreadManager*		GthreadManager = nullptr;
+ThreadManager*		GThreadManager = nullptr;
 Memory*				GMemory = nullptr;
 DeadLockProfiler*	GDeadLockProfiler = nullptr;
 
@@ -13,7 +13,7 @@ class CoreGlobal
 public:
 
 	CoreGlobal() {
-		GthreadManager = new ThreadManager();
+		GThreadManager = new ThreadManager();
 		GMemory = new Memory();
 		GDeadLockProfiler = new DeadLockProfiler();
 
@@ -21,7 +21,7 @@ public:
 	}
 
 	~CoreGlobal() {
-		delete GthreadManager;
+		delete GThreadManager;
 		delete GMemory;
 		delete GDeadLockProfiler;
 

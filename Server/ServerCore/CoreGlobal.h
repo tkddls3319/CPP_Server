@@ -1,7 +1,7 @@
 #pragma once
 
 
-extern class ThreadManager* GthreadManager;
+extern class ThreadManager* GThreadManager;
 
 extern class Memory* GMemory;
 
