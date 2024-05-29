@@ -9,7 +9,7 @@ class SocketUtils
 public:
 	//비동기 소켓 운영을 위한 함수의 포인터들 (델리게이트)
 	static LPFN_CONNECTEX ConnectEx;
-	static LPFN_DISCONNECTEX DisConnectEx;
+	static LPFN_DISCONNECTEX DisconnectEx;
 	static LPFN_ACCEPTEX AcceptEx;
 
 public:

@@ -7,7 +7,7 @@
 
 //비동기 소켓 운영을 위한 함수의 포인터들 (델리게이트)
 LPFN_CONNECTEX SocketUtils::ConnectEx = nullptr;
-LPFN_DISCONNECTEX SocketUtils::DisConnectEx = nullptr;
+LPFN_DISCONNECTEX SocketUtils::DisconnectEx = nullptr;
 LPFN_ACCEPTEX SocketUtils::AcceptEx = nullptr;
 
 void SocketUtils::Init()
@@ -18,7 +18,7 @@ void SocketUtils::Init()
 	//런타임에 주소 얻어오기
 	SOCKET dummySocket = CreateSocket();
 	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_CONNECTEX, reinterpret_cast<LPVOID*>(&ConnectEx)));
-	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_DISCONNECTEX, reinterpret_cast<LPVOID*>(&DisConnectEx)));
+	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_DISCONNECTEX, reinterpret_cast<LPVOID*>(&DisconnectEx)));
 	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_ACCEPTEX, reinterpret_cast<LPVOID*>(&AcceptEx)));
 }
 
@@ -80,7 +80,7 @@ bool SocketUtils::Bind(SOCKET socket, NetAddress netAddr)
 {
 	return SOCKET_ERROR != ::bind(socket, reinterpret_cast<const SOCKADDR*>(&netAddr.GetSockAddr()), sizeof(SOCKADDR_IN));
 }
-
+//아무 IP와 PORT 모두 가능
 bool SocketUtils::BindAnyAddress(SOCKET socket, uint16 port)
 {
 	//나의 주소 : IP주소 + PORT
