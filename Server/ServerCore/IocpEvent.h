@@ -64,6 +64,6 @@ class SendEvent :public IocpEvent
 public:
 	SendEvent() :IocpEvent(EventType::Send) { }
 
-private:
-	//TODO 인자가 추가적으로 있을수도있다.
+	Vector<BYTE> buffer;
+
 };

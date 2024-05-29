@@ -18,10 +18,8 @@ MemoryPool::~MemoryPool()
 
 void MemoryPool::Push(MemoryHeader* ptr)
 {
-
 	ptr->allocSize = 0;
 
-	// Pool에 메모리 반납
 	::InterlockedPushEntrySList(&_header, static_cast<PSLIST_ENTRY>(ptr));
 
 	_useCount.fetch_sub(1);

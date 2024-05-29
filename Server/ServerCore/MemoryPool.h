@@ -1,6 +1,6 @@
 #pragma once
 
-enum 
+enum
 {
 	SLIST_ALIGNMENT = 16
 };
@@ -8,6 +8,7 @@ enum
 /*-----------------
 	MemoryHeader
 ------------------*/
+
 DECLSPEC_ALIGN(SLIST_ALIGNMENT)
 struct MemoryHeader : public SLIST_ENTRY
 {
@@ -33,6 +34,7 @@ struct MemoryHeader : public SLIST_ENTRY
 /*-----------------
 	MemoryPool
 ------------------*/
+
 DECLSPEC_ALIGN(SLIST_ALIGNMENT)
 class MemoryPool
 {
@@ -41,13 +43,12 @@ public:
 	~MemoryPool();
 
 	void			Push(MemoryHeader* ptr);
-	MemoryHeader* Pop();
+	MemoryHeader*	Pop();
 
 private:
-
-	SLIST_HEADER _header; //락프리스텍 관리
-	int32 _allocSize = 0;
-	atomic<int32> _useCount = 0;
-	atomic<int32> _reserveCount = 0;
+	SLIST_HEADER	_header;
+	int32			_allocSize = 0;
+	atomic<int32>	_useCount = 0;
+	atomic<int32>	_reserveCount = 0;
 };
 
