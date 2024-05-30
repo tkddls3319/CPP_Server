@@ -13,6 +13,7 @@
   NetAddress.cpp
   RecvBuffer.cpp
   RefCounting.cpp
+  SendBuffer.cpp
   Service.cpp
   Session.cpp
   SocketUtils.cpp

@@ -13,6 +13,7 @@ D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\NetAddress.cpp;D:\2.Projec
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\pch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\pch.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RecvBuffer.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\RecvBuffer.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RefCounting.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\RefCounting.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\SendBuffer.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\SendBuffer.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Service.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Service.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Session.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Session.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\SocketUtils.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\SocketUtils.obj
