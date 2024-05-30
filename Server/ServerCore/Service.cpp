@@ -62,13 +62,13 @@ bool ClientService::Start()
 		return false;
 
 	const int32 sessionCount = GetMaxSessionCount();
-
 	for (int32 i = 0; i < sessionCount; i++)
 	{
 		SessionRef session = CreateSession();
 		if (session->Connect() == false)
 			return false;
 	}
+
 	return true;
 }
 
@@ -77,9 +77,6 @@ ServerService::ServerService(NetAddress address, IocpCoreRef core, SessionFactor
 {
 }
 
-/*-----------------
-	ServerService
-------------------*/
 bool ServerService::Start()
 {
 	if (CanStart() == false)

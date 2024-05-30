@@ -8,12 +8,11 @@ class SocketUtils
 {
 public:
 	//비동기 소켓 운영을 위한 함수의 포인터들 (델리게이트)
-	static LPFN_CONNECTEX ConnectEx;
-	static LPFN_DISCONNECTEX DisconnectEx;
-	static LPFN_ACCEPTEX AcceptEx;
+	static LPFN_CONNECTEX		ConnectEx;
+	static LPFN_DISCONNECTEX	DisconnectEx;
+	static LPFN_ACCEPTEX		AcceptEx;
 
 public:
-
 	static void Init();
 	static void Clear();
 
@@ -30,7 +29,7 @@ public:
 	static bool Bind(SOCKET socket, NetAddress netAddr);
 	static bool BindAnyAddress(SOCKET socket, uint16 port);
 	static bool Listen(SOCKET socket, int32 backlog = SOMAXCONN);
-	static void Close(SOCKET socket);
+	static void Close(SOCKET& socket);
 };
 
 template<typename T>

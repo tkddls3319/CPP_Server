@@ -11,6 +11,7 @@ D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.cpp;D:\2.Project\99
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\MemoryPool.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\MemoryPool.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\NetAddress.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\NetAddress.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\pch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\pch.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RecvBuffer.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\RecvBuffer.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\RefCounting.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\RefCounting.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Service.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Service.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Session.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Session.obj

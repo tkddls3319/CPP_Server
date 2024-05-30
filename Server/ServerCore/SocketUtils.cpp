@@ -6,9 +6,10 @@
 ------------------*/
 
 //비동기 소켓 운영을 위한 함수의 포인터들 (델리게이트)
-LPFN_CONNECTEX SocketUtils::ConnectEx = nullptr;
-LPFN_DISCONNECTEX SocketUtils::DisconnectEx = nullptr;
-LPFN_ACCEPTEX SocketUtils::AcceptEx = nullptr;
+
+LPFN_CONNECTEX		SocketUtils::ConnectEx = nullptr;
+LPFN_DISCONNECTEX	SocketUtils::DisconnectEx = nullptr;
+LPFN_ACCEPTEX		SocketUtils::AcceptEx = nullptr;
 
 void SocketUtils::Init()
 {
@@ -20,6 +21,7 @@ void SocketUtils::Init()
 	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_CONNECTEX, reinterpret_cast<LPVOID*>(&ConnectEx)));
 	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_DISCONNECTEX, reinterpret_cast<LPVOID*>(&DisconnectEx)));
 	ASSERT_CRASH(BindWindowsFunction(dummySocket, WSAID_ACCEPTEX, reinterpret_cast<LPVOID*>(&AcceptEx)));
+	Close(dummySocket);
 }
 
 void SocketUtils::Clear() {
@@ -89,7 +91,7 @@ bool SocketUtils::BindAnyAddress(SOCKET socket, uint16 port)
 	myAddress.sin_addr.s_addr = ::htonl(INADDR_ANY);//아이피 알아서 설정
 	myAddress.sin_port = ::htons(port);//PORT
 
-	return SOCKET_ERROR != ::bind(socket, reinterpret_cast<const SOCKADDR*> (&myAddress), sizeof(myAddress));
+	return SOCKET_ERROR != ::bind(socket, reinterpret_cast<const SOCKADDR*>(&myAddress), sizeof(myAddress));
 }
 
 bool SocketUtils::Listen(SOCKET socket, int32 backlog)
@@ -97,10 +99,9 @@ bool SocketUtils::Listen(SOCKET socket, int32 backlog)
 	return SOCKET_ERROR != listen(socket, backlog);
 }
 
-void SocketUtils::Close(SOCKET socket)
+void SocketUtils::Close(SOCKET& socket)
 {
-	if(socket != INVALID_SOCKET)
-	::closesocket(socket);
-
+	if (socket != INVALID_SOCKET)
+		::closesocket(socket);
 	socket = INVALID_SOCKET;
 }
