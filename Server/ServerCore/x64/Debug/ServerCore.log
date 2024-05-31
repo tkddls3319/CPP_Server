@@ -1,5 +1,7 @@
 ﻿  pch.cpp
   Allocator.cpp
+  BufferReader.cpp
+  BufferWriter.cpp
   CoreGlobal.cpp
   CorePch.cpp
   CoreTLS.cpp
@@ -14,12 +16,11 @@
   RecvBuffer.cpp
   RefCounting.cpp
   SendBuffer.cpp
-D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\SendBuffer.cpp(20,2): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
-  (소스 파일 '/SendBuffer.cpp'을(를) 컴파일하는 중)
-  
   Service.cpp
   Session.cpp
   SocketUtils.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
   ThreadManager.cpp
   코드를 생성하고 있습니다...
   ServerCore.vcxproj -> D:\2.Project\9999.My\CPP\CPP_Server\Server\Libraries\Debug\ServerCore.lib

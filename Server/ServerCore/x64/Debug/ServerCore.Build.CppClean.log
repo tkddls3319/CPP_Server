@@ -2,7 +2,6 @@ d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\servercore.pch
 d:\2.project\9999.my\cpp\cpp_server\server\libraries\debug\servercore.pdb
 d:\2.project\9999.my\cpp\cpp_server\server\libraries\debug\servercore.idb
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\pch.obj
-d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\threadmanager.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\socketutils.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\session.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\service.obj
@@ -20,7 +19,10 @@ d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\deadlockprofiler
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\coretls.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\corepch.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\coreglobal.obj
+d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\bufferwriter.obj
+d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\bufferreader.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\allocator.obj
+d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\threadmanager.obj
 d:\2.project\9999.my\cpp\cpp_server\server\libraries\debug\servercore.lib
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\servercore.tlog\cl.command.1.tlog
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\servercore.tlog\cl.items.tlog
