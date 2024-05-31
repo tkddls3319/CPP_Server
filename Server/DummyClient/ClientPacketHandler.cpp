@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "ClientPacketHandler.h"
 #include "BufferReader.h"
-
+#include "Protocol.pb.h"
 void ClientPacketHandler::HandlePacket(BYTE* buffer, int32 len)
 {
 	BufferReader br(buffer, len);
@@ -17,64 +17,18 @@ void ClientPacketHandler::HandlePacket(BYTE* buffer, int32 len)
 	}
 }
 
-// 패킷 설계 TEMP
-struct BuffData
-{
-	uint64 buffId;
-	float remainTime;
-};
-
-struct S_TEST
-{
-	uint64 id;
-	uint32 hp;
-	uint16 attack;
-	// 가변 데이터
-	// 1) 문자열 (ex. name)
-	// 2) 그냥 바이트 배열 (ex. 길드 이미지)
-	// 3) 일반 리스트
-	vector<BuffData> buffs;
-	wstring name;
-};
-
+// [ PKT_S_TEST ][BuffsListItem BuffsListItem BuffsListItem]
 void ClientPacketHandler::Handle_S_TEST(BYTE* buffer, int32 len)
 {
-	BufferReader br(buffer, len);
+	Protocol::S_TEST pkt;
+	ASSERT_CRASH(pkt.ParseFromArray(buffer + sizeof(PacketHeader), len - sizeof(PacketHeader)));
 
-	PacketHeader header;
-	br >> header;
+	cout << pkt.id() << " " << pkt.hp() << " " << pkt.attack() << endl;
+	cout << "BUFSIZE : " << pkt.buffs_size() << endl;
 
-	uint64 id;
-	uint32 hp;
-	uint16 attack;
-	br >> id >> hp >> attack;
 
-	cout << "ID: " << id << " HP : " << hp << " ATT : " << attack << endl;
-
-	vector<BuffData> buffs;
-	uint16 buffCount;
-	br >> buffCount;
-
-	buffs.resize(buffCount);
-	for (int32 i = 0; i < buffCount; i++)
+	for (auto& buf : pkt.buffs ())
 	{
-		br >> buffs[i].buffId >> buffs[i].remainTime;
+		cout << buf.buffid();
 	}
-
-	cout << "BufCount : " << buffCount << endl;
-	for (int32 i = 0; i < buffCount; i++)
-	{
-		cout << "BufInfo : " << buffs[i].buffId << " " << buffs[i].remainTime << endl;
-	}
-
-	wstring name;
-	uint16 nameLen;
-	br >> nameLen;
-	name.resize(nameLen);
-
-	br.Read((void*)name.data(), nameLen * sizeof(WCHAR));
-
-
-	wcout.imbue(std::locale("kor"));
-	wcout << name << endl;
 }

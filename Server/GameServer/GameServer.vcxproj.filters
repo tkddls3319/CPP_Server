@@ -7,6 +7,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{a38b7936-7364-42eb-b91c-38de7badb796}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{04d182bb-f58c-4932-8896-7cf37d8a920b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameServer.cpp">
@@ -24,6 +27,9 @@
     <ClCompile Include="ServerPacketHandler.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Protocol.pb.cc">
+      <Filter>Protocol</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -37,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="ServerPacketHandler.h">
       <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.pb.h">
+      <Filter>Protocol</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

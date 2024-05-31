@@ -6,7 +6,9 @@
 #include "GameSessionManager.h"
 #include "BufferWriter.h"
 #include "ServerPacketHandler.h"
-#include "tchar.h"
+#include <tchar.h>
+#include "Protocol.pb.h"
+
 int main()
 {
 	ServerServiceRef service = MakeShared<ServerService>(
@@ -27,16 +29,36 @@ int main()
 				}
 			});
 	}
-	//UNICODE
-	char sendData[1000] = "가";//ASCII
-	char sendData2[1000] = u8"가";
-	WCHAR sendData3[1000] = L"가";// UTF16 ;
-	TCHAR sendData4[1000] = _T("가");
+
+	WCHAR sendData3[1000] = L"가"; // UTF16 = Unicode (한글/로마 2바이트)
 
 	while (true)
 	{
-		vector<BuffData> buffs{ BuffData {100, 1.5f}, BuffData{200, 2.3f}, BuffData {300, 0.7f } };
-		SendBufferRef sendBuffer = ServerPacketHandler::Make_S_TEST(1001, 100, 10, buffs, L"안녕하쇼");
+		Protocol::S_TEST pkt;
+		pkt.set_id(1000);
+		pkt.set_hp(100);
+		pkt.set_attack(10);
+
+		{
+			Protocol::BuffData* data = pkt.add_buffs();
+			data->set_buffid(100);
+			data->set_remaintime(1.2f);
+			data->add_victims(4000);
+		}
+		{
+			Protocol::BuffData* data = pkt.add_buffs();
+			data->set_buffid(200);
+			data->set_remaintime(2.2f);
+			data->add_victims(6000);
+		}
+		{
+			Protocol::BuffData* data = pkt.add_buffs();
+			data->set_buffid(300);
+			data->set_remaintime(3.2f);
+			data->add_victims(8000);
+		}
+
+		SendBufferRef sendBuffer = ServerPacketHandler::MakeSendBuffer(pkt);
 		GSessionManager.Broadcast(sendBuffer);
 
 		this_thread::sleep_for(250ms);
