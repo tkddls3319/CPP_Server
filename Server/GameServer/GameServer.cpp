@@ -5,7 +5,8 @@
 #include "GameSession.h"
 #include "GameSessionManager.h"
 #include "BufferWriter.h"
-
+#include "ServerPacketHandler.h"
+#include "tchar.h"
 int main()
 {
 	ServerServiceRef service = MakeShared<ServerService>(
@@ -26,26 +27,20 @@ int main()
 				}
 			});
 	}
-	char sendData[1000] = "Hello World";
+	//UNICODE
+	char sendData[1000] = "가";//ASCII
+	char sendData2[1000] = u8"가";
+	WCHAR sendData3[1000] = L"가";// UTF16 ;
+	TCHAR sendData4[1000] = _T("가");
 
 	while (true)
 	{
-		SendBufferRef sendBuffer = GSendBufferManager->Open(4096);
-
-		BufferWriter bw(sendBuffer->Buffer(), 4096);
-
-		PacketHeader* header =	bw.Reserve<PacketHeader>();
-		bw << (uint64)1001 << (uint32)100 << (uint16)10;
-		bw.Write(sendData, sizeof(sendData));
-
-		header->size = bw.WriteSize();
-		header->id = 1; // 1 : Hello Msg
-
-		sendBuffer->Close(bw.WriteSize());
-
+		vector<BuffData> buffs{ BuffData {100, 1.5f}, BuffData{200, 2.3f}, BuffData {300, 0.7f } };
+		SendBufferRef sendBuffer = ServerPacketHandler::Make_S_TEST(1001, 100, 10, buffs, L"안녕하쇼");
 		GSessionManager.Broadcast(sendBuffer);
 
 		this_thread::sleep_for(250ms);
 	}
+
 	GThreadManager->Join();
 }
