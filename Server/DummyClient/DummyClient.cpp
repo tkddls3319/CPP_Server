@@ -77,7 +77,7 @@ int main()
 	while (true)
 	{
 		service->BroadCast(sendBuffer);
-		this_thread::sleep_for(1s);
+		this_thread::sleep_for(1ms);
 	}
 
 	GThreadManager->Join();
