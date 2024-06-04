@@ -10,8 +10,8 @@ d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\memorypool.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\memory.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\lock.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\listener.obj
-d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\jobseriallizer.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\jobqueue.obj
+d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\lockqueue.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\job.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\iocpevent.obj
 d:\2.project\9999.my\cpp\cpp_server\server\servercore\x64\debug\iocpcore.obj

@@ -24,7 +24,7 @@ public:
 	}
 	void Execute()
 	{
-		_callback;
+		_callback();
 	}
 
 private:

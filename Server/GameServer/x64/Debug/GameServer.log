@@ -139,28 +139,28 @@
   		return sendBuffer;
   	}
   };
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Enum.pb.h
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Enum.pb.cc
-  파일을 찾을 수 없습니다-Struct.pb.h
+  D:Enum.pb.h
+  1개 파일이 복사되었습니다.
+  D:Enum.pb.cc
+  1개 파일이 복사되었습니다.
+  D:Struct.pb.h
+  1개 파일이 복사되었습니다.
+  D:Struct.pb.cc
+  1개 파일이 복사되었습니다.
+  D:Protocol.pb.h
+  1개 파일이 복사되었습니다.
+  D:Protocol.pb.cc
+  1개 파일이 복사되었습니다.
+  D:ClientPacketHandler.h
+  1개 파일이 복사되었습니다.
+  D:Enum.pb.h
+  1개 파일이 복사되었습니다.
+  D:Enum.pb.cc
+  1개 파일이 복사되었습니다.
+  D:Struct.pb.h
+  1개 파일이 복사되었습니다.
   0개 파일이 복사되었습니다.
   파일을 찾을 수 없습니다-Struct.pb.cc
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Protocol.pb.h
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Protocol.pb.cc
-  0개 파일이 복사되었습니다.
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-ClientPacketHandler.h
-  파일을 찾을 수 없습니다-Enum.pb.h
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Enum.pb.cc
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Struct.pb.h
-  0개 파일이 복사되었습니다.
-  파일을 찾을 수 없습니다-Struct.pb.cc
-  0개 파일이 복사되었습니다.
   파일을 찾을 수 없습니다-Protocol.pb.h
   0개 파일이 복사되었습니다.
   파일을 찾을 수 없습니다-Protocol.pb.cc
@@ -176,11 +176,11 @@
   Protocol.pb.cc
   Struct.pb.cc
   코드를 생성하고 있습니다...
+  ClientPacketHandler.cpp
   GameServer.cpp
   GameSession.cpp
   GameSessionManager.cpp
   Player.cpp
-  ClientPacketHandler.cpp
   Room.cpp
   코드를 생성하고 있습니다...
   GameServer.vcxproj -> D:\2.Project\9999.My\CPP\CPP_Server\Server\Binary\Debug\GameServer.exe

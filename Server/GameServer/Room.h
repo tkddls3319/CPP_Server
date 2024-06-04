@@ -1,7 +1,7 @@
 #pragma once
-#include "JobSeriallizer.h"
+#include "JobQueue.h"
 
-class Room : public JobSeriallizer
+class Room : public JobQueue
 {
 public:
 	// 싱글쓰레드 환경인마냥 코딩
@@ -10,9 +10,6 @@ public:
 	void Broadcast(SendBufferRef sendBuffer);
 
 public:
-	// 멀티쓰레드 환경에서는 일감으로 접근
-	//void PushJob(JobRef job) { _jobs.Push(job); }
-	virtual void FlushJob() override;
 
 
 private:
