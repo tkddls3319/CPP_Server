@@ -7,6 +7,9 @@ D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreTLS.cpp;D:\2.Project\9
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\DeadLockProfiler.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\DeadLockProfiler.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\IocpCore.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\IocpCore.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\IocpEvent.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\IocpEvent.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Job.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Job.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\JobQueue.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\JobQueue.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\JobSeriallizer.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\JobSeriallizer.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Listener.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Listener.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Lock.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Lock.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Memory.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Memory.obj
