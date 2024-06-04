@@ -5,6 +5,7 @@ D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreGlobal.cpp;D:\2.Projec
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CorePch.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\CorePch.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\CoreTLS.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\CoreTLS.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\DeadLockProfiler.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\DeadLockProfiler.obj
+D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\GlobalQueue.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\GlobalQueue.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\IocpCore.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\IocpCore.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\IocpEvent.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\IocpEvent.obj
 D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\Job.cpp;D:\2.Project\9999.My\CPP\CPP_Server\Server\ServerCore\x64\Debug\Job.obj
